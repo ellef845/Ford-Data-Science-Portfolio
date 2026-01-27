@@ -6,4 +6,4 @@ print("Setup successful!")
 print(f"pandas version: {pd.__version__}")
 print(f"numpy version: {np.__version__}")
 
-
+print("I love apples.")
