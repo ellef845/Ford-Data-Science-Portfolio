@@ -7,5 +7,6 @@ My app utilizes a Kaggle dataset titled "Spotify Tracks Dataset" which describes
 
 ### Directions on how to run the app: 
 
-1. Download the basic_streamlit_app folder
-2. Go into your python terminal and give the command "streamlit run basic_streamlit_app/main.py".
+1. Download the basic_streamlit_app folder.
+2. Make sure you have streamlit installed within your python environment.
+3. Go into your python terminal and give the command "streamlit run basic_streamlit_app/main.py".
