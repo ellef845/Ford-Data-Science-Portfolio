@@ -15,10 +15,8 @@ import streamlit as st
 st.set_page_config(page_title='Making a Hit',  layout='wide', page_icon=':musical_note:') 
 
 
-t1, t2 = st.columns((1, 0.1), gap = "small") 
-
-t1.title("What makes a Spotify song a hit? :studio_microphone: :fire:")
-t1.markdown("""
+st.title("What makes a Spotify song a hit? :studio_microphone: :fire:")
+st.markdown("""
 This Exploratory Data Analysis (EDA) examines how danceability and energy affect music 
 popularity and help make "a hit". Utilizing tabs, users may filter the dataset by 
 specific genres, albums, and artist/artist groups to visualize how danceability and energy affect musical success. 
@@ -68,7 +66,7 @@ with tab1:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("##### Danceability vs. Popularity")
+        st.markdown("##### The Impact of Danceability on Song Popularity")
         st.scatter_chart(
             genre_filtered_df,
             x="danceability",
@@ -78,7 +76,7 @@ with tab1:
             y_label="Popularity Score"
         )
     with col2:
-        st.markdown("##### Energy vs. Popularity")
+        st.markdown("##### The Impact of Energy on Song Popularity")
         st.scatter_chart(
             genre_filtered_df,
             x="energy",
@@ -151,7 +149,7 @@ with tab2:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("##### Danceability vs. Popularity")
+        st.markdown("##### The Impact of Danceability on Song Popularity")
         st.scatter_chart(
             album_filtered_df,
             x="danceability",
@@ -161,7 +159,7 @@ with tab2:
             y_label="Popularity Score"
         )
     with col2:
-        st.markdown("##### Energy vs. Popularity")
+        st.markdown("##### The Impact of Energy on Song Popularity")
         st.scatter_chart(
             album_filtered_df,
             x="energy",
@@ -230,7 +228,7 @@ with tab3:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("##### Danceability vs. Popularity")
+        st.markdown("##### The Impact of Danceability on Song Popularity")
         st.scatter_chart(
             artist_filtered_df,
             x="danceability",
@@ -240,7 +238,7 @@ with tab3:
             y_label="Popularity Score"
         )
     with col2:
-        st.markdown("##### Energy vs. Popularity")
+        st.markdown("##### The Impact of Energy on Song Popularity")
         st.scatter_chart(
             artist_filtered_df,
             x="energy",
