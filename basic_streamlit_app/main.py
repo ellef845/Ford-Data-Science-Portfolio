@@ -11,11 +11,12 @@ import streamlit as st
 #Create a background color:
 
 
-#This is a header: 
+#Labels the application page web tab:
 st.set_page_config(page_title='Making a Hit',  layout='wide', page_icon=':musical_note:') 
 
+#Creates a title/brief description of the page
 
-st.title("What makes a Spotify song a hit? :studio_microphone: :fire:")
+st.title("What Drives a Hit on Spotify? :studio_microphone: :fire:")
 st.markdown("""
 This Exploratory Data Analysis (EDA) examines how danceability and energy affect music 
 popularity and help make "a hit". Utilizing tabs, users may filter the dataset by 
@@ -43,7 +44,7 @@ with tab1:
                                 df["track_genre"].unique(), 
                                 help = 'Filter report to show only one genre')
 
-    #Filter the dataframe based on genre select: 
+    #Filter the dataframe based on genre selection: 
     genre_filtered_df = df[df['track_genre'] == genre_select]
 
     #Calculate unique values from filtered data: 
@@ -125,7 +126,7 @@ with tab2:
                                 df["album_name"].unique(), 
                                 help = 'Filter report to show only one album')
 
-    #Filter the dataframe based on genre select: 
+    #Filter the dataframe based on album selection: 
     album_filtered_df = df[df['album_name'] == album_select]
 
     #Calculate unique values from filtered data: 
@@ -205,7 +206,7 @@ with tab3:
                                 df["artists"].unique(), 
                                 help = 'Filter report to show only one artist')
 
-    #Filter the dataframe based on genre select: 
+    #Filter the dataframe based on artist selection: 
     artist_filtered_df = df[df['artists'] == artist_select]
 
     #Calculate unique values from filtered data: 
