@@ -10,7 +10,7 @@ This project deploys python skills to build an interactive web application in St
 **See all files regarding this project in the basic_streamlit_app folder. 
 
 #### Tidy Data Project:
-This project utilizes python to transform data from the 2008 Summer Olympics so that it reflects the key principles of a tidy dataset: each variable has its own column, each observation forms its own row, and each type of observational unit forms its own table. It also includes visualizations which show the number of medals won by each sex as well as the top five sports in which greatest amount of metals were won and in which the least amount of medals were one. The notebook finishes with a pivot-table which sums the total number of metals for each sport segregated by sex. The project demonstates the ability to both clean and visulaize data. 
+This project utilizes python to transform data from the 2008 Summer Olympics so that it reflects the key principles of a tidy dataset: each variable has its own column, each observation forms its own row, and each type of observational unit forms its own table. It also includes visualizations which show the number of medals won by each sex as well as the top five sports in which greatest amount of metals were won and in which the least amount of medals were one. The notebook finishes with a pivot-table which sums the total number of metals for each sport segregated by sex. The project demonstates the ability to both clean and visualize data. 
 
 **See all files regarding this project in the TidyData-Project folder. 
 
