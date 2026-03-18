@@ -7,4 +7,16 @@ My notebook utilizes a Github dataset titled "2008 Summer Olympics" originally c
 ### Directions on how to run the notebook: 
 1. Download the TidyData-Project folder.
 2. Make sure you have seaborn, matplotlib.pyplot, and pandas installed within your python environment.
-3. Run the code for the entire page. 
+3. Run the code for the entire page.
+
+### References: 
+For project references, I use ["Data Wrangling with pandas Cheat Sheet"](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) made by http://pandas.pydata.org and ["Tidy Data"](https://vita.had.co.nz/papers/tidy-data.pdf) written by Hadley Wickham. 
+
+### Example Visualizations: 
+<img width="571" height="453" alt="image" src="https://github.com/user-attachments/assets/fa525073-356c-4aa2-b8c3-63092c766386" />
+<img width="797" height="544" alt="image" src="https://github.com/user-attachments/assets/e998dca2-269d-42c6-8113-c24e1cb81bb6" />
+<img width="758" height="561" alt="image" src="https://github.com/user-attachments/assets/086537b2-e87c-4e67-a1b8-f93d477841c2" />
+
+
+
+
