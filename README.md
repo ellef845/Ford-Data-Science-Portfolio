@@ -14,3 +14,10 @@ This project utilizes python to transform data from the 2008 Summer Olympics so 
 
 **See all files regarding this project in the [TidyData-Project folder](./TidyData-Project).
 
+#### Development of a Supervised Machine Learning Streamlit App:
+This app provides an interactive machine learning experience for the user, allowing them to experiment with decision tree and logistic regression models. Within the app, one may test how different hyperparameters affect specific scoring metrics as well as receive computer generated recommendations on how to create the optimal decision tree model. This projects builds upon my understanding of machine learning, showcasing clear comprehension of supervised machine learning model construction. It complements my overall portfolio, displaying a growing knowledge of Streamlit, Python development, and model development. 
+
+
+**See all files regarding this project in the [MLStreamlitApp Project Folder](./MLStreamlitApp).
+
+**To run the deployed app, visit this ["link"](https://ellef845-ford-data-science-po-mlstreamlitappapp-mainfile-8u7d8n.streamlit.app/)
