@@ -9,17 +9,17 @@ Decision tree and logistic regression models are utilized to predict outcomes us
 Within the application, users have the ability to choose different scoring metrics to measure their model as well as criterion. Scoring metric options include accuracy, F1 score, precision, and recall. Criterion options includes gini index, log loss, and entropy. Users may also adjust the hyperparameters of their decision tree models (the maximum tree depth, minimum number of samples to conduct a split, and the minimum samples for a leaf). 
 
 ### Data: 
-The provided demo datasets, ["Breast Cancer"](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html) and ["Wine"](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html), are sourced from sklearn. The Breast Cancer dataset contains information regarding maligment and beign tumors. It possesses variables such as "mean radius,"
+The provided demo datasets, ["Breast Cancer"](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html) and ["Wine"](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html), are sourced from scikit-learn. The Breast Cancer dataset contains information regarding maligment and beign tumors. It possesses variables such as "mean radius,"
 "mean texture", "mean perimeter", etc. The Wine dataset contains information regarding three different wine classes and their individual characteristics. It contains variables such as "alcohol", "ash", 
 "malic acid", etc. 
 
 ### Directions on how to run the streamlit app: 
 To run the app locally:
 1. Download the MLStreamlitApp folder.
-2. Make sure you have seaborn, matplotlib.pyplot, and pandas installed within your python environment.
-3. Run the code for the entire page.
+2. Make sure you have streamlit, pandas, numpy, seaborn, matplotlib, scikit-learn, and graphviz installed within your python environment.
+3. Type "streamlit run app_mainfile.py" into your terminal. 
 
 You may also run the app via this ["link"](https://ellef845-ford-data-science-po-mlstreamlitappapp-mainfile-8u7d8n.streamlit.app/) to its deployed version on Streamlit. 
 
 ### References: 
-For project references, I use ["Data Wrangling with pandas Cheat Sheet"](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) made by http://pandas.pydata.org and ["Tidy Data"](https://vita.had.co.nz/papers/tidy-data.pdf) written by Hadley Wickham. 
+For project references, I use ["Data Wrangling with pandas Cheat Sheet"](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) made by http://pandas.pydata.org as well as 
