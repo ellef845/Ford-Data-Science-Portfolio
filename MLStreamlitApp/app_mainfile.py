@@ -499,7 +499,7 @@ if data is not None:
         df_tree = preprocess_decision_tree(data[selected_features + [target_feature]].copy(), target_feature)
 
     # Model Training
-      if st.button("Run Analysis"):
+    if st.button("Run Analysis"):
         #Splitting Data
         X_train, X_test, y_train, y_test = split(df_tree, selected_features, target_feature)
         X_train_log, X_test_log, y_train_log, y_test_log = split(df_log, selected_features, target_feature)
