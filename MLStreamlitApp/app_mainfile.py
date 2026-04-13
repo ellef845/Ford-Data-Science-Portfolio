@@ -63,8 +63,8 @@ This interactive application shows the performance of two supervised machine lea
             A user may upload a dataset or utilize one of the two demo datasets to explore how adjusting model imputs affects scoring outcomes such as accuaracy. 
 
 **With this application, a user may:**
-* Choose different model cirition to prioritize 
-* Adjust model parameters 
+* Choose different model criterion to prioritize 
+* Adjust model hyperparameters 
 * Visualize a model's performance
 * Receive computer generated recommendations on how to create the optimal decision tree model
 """)
