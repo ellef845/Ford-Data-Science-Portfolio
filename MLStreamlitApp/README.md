@@ -21,7 +21,7 @@ To run the app locally:
 You may also run the app via this ["link"](https://ellef845-ford-data-science-po-mlstreamlitappapp-mainfile-8u7d8n.streamlit.app/). 
 
 ### References: 
-For project references, I used ["Data Wrangling with pandas Cheat Sheet"](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) made by http://pandas.pydata.org as well as course notes on ["logistic regression"](https://github.com/ellef845/Ford-Data-Science-Portfolio/blob/main/week_nine/IDS%20Week%209_1_FINAL.ipynb) and ["decision tree classifiers"](https://github.com/ellef845/Ford-Data-Science-Portfolio/blob/main/week_ten/IDS%20Week%2010_2_FINAL.ipynb) created David Smiley. I also utilized scikit-learn documentation for functions such as a ["label_binarize"](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.label_binarize.html). 
+For project references, I used ["Data Wrangling with pandas Cheat Sheet"](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) made by http://pandas.pydata.org as well as course notes on ["logistic regression"](https://github.com/ellef845/Ford-Data-Science-Portfolio/blob/main/week_nine/IDS%20Week%209_1_FINAL.ipynb) and ["decision tree classifiers"](https://github.com/ellef845/Ford-Data-Science-Portfolio/blob/main/week_ten/IDS%20Week%2010_2_FINAL.ipynb) created by David Smiley. I also utilized scikit-learn documentation for functions such as a ["label_binarize"](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.label_binarize.html). 
 
 ### Visualizations of the Application
 
