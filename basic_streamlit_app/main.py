@@ -29,7 +29,7 @@ st.divider()
 
 
 #Load in Data
-df = pd.read_csv("data/spotify_data.csv") 
+df = pd.read_csv("basic_streamlit_app/data/spotify_data.csv")
 
 ##################################################
 #Add in tabs: 
