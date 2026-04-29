@@ -1,17 +1,15 @@
 # Importing necessary libraries
 import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
-import streamlit as st
+import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.datasets import fetch_california_housing
+import streamlit as st
+
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.decomposition import PCA 
-from sklearn.datasets import load_iris
-from PIL import Image
-Image.MAX_IMAGE_PIXELS = None
 from sklearn.cluster import KMeans
 from sklearn.metrics import accuracy_score, silhouette_score
+from sklearn.datasets import load_iris
 
 # ------------------------------------
 # Page Setup
@@ -261,6 +259,8 @@ def PCA_var_plot(X_std):
 # ------------------------------------
 # Compute K-Means
 # ------------------------------------
+
+#Define a function which computes K-Means
 
 def compute_kmeans(k_clusters, max_runs, X_std):
     kmeans = KMeans(n_clusters = k_clusters, max_iter = max_runs, random_state = 42)
@@ -563,7 +563,7 @@ if st.button(f"Run Analysis {analysis_mode}"):
             ks, wcss, silhouette_scores = calculate_silhouette_score(X_std)
 
             # Create tabs
-            tab1, tab2, tab3 = st.tabs(["Model Accuarcy", "2D Cluster Visulization", "Optimal K Analysis Plot"])
+            tab1, tab2, tab3 = st.tabs(["Model Accuarcy", "2D Cluster Visulization", "Optimal K Analysis Plots"])
 
             with tab1:
                 st.write("#### Accuracy Summary")
