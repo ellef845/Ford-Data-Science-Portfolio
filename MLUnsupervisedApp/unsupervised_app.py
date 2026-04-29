@@ -464,8 +464,6 @@ if data is not None:
         with col2: 
             #Create a list of all features options 
             feature_names = st.multiselect("Select Features (X)", [c for c in all_columns if c != target_feature])
-else: 
-    st.info("Please upload a tabular, tidy CSV or select a demo dataset from the sidebar to begin.")
 
 
 # ------------------------------------
