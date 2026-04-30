@@ -184,16 +184,17 @@ def PCA_load_plot(pca, feature_names):
         columns = feature_names, 
         index = [f'PC{i+1}' for i in range(pca.n_components)]
     )
-    # Create positions for horizontal bars, ensuring that each feature gets it own row. 
 
     features = loadings_df.columns.to_list()
-    y_pos = np.arange(len(features))
-    bar_height = 0.3
+    num_features = len(features)
 
     # Create dynamic height for chart
-    
     dynamic_height = max(4, num_features * 0.4) 
     fig, ax = plt.subplots(figsize=(6, dynamic_height))
+    
+    # Create positions for horizontal bars, ensuring that each feature gets it own row. 
+    y_pos = np.arange(len(features))
+    bar_height = 0.3
 
     # Plot PC1 and PC2 loadings side by side for each feature.
     # bar_height/2 puts blank, vertical space between every listing, preventing overlap
