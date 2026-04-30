@@ -66,7 +66,7 @@ This interactive application allows users to experiment with two unsupervised ma
 * Visualize a model's performance feedback via graphs and other metrics
  
             
-*****Note: For both Principal Component Analysis (PCA) and K-Means, a target feature is unnecessary to calculate model results.
+*****Note: For both PCA and K-Means, a target feature is unnecessary to calculate model results.
     However, this app requires the insertion of a target feature to assist with data visualization. Using a dataset
     with a target feature, allows you to see whether or not PCA and K-means worked through the creation of 2D plots! 
     We mark and exclude the target feature from the overall analysis to prevent data leakage.***
