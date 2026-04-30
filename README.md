@@ -23,7 +23,7 @@ This project uses python to create an interactive web application in Streamlit. 
 **To run the deployed app, visit this ["link"](https://ellef845-ford-data-science-po-mlstreamlitappapp-mainfile-8u7d8n.streamlit.app/)
 
 #### Development of an Unupervised Machine Learning Streamlit App:
-This project employs python to create an interactive web application in Streamlit. My app "Unsupervised Machine Learning: Principal Component Analysis (PCA) and K-Means" provides an intuitive interface which provides unsupervised machine learning model exploration. Using this application, a user may upload a dataset or utilize one of the two demo datasets to explore how adjusting different model imputs and hyperparameters affects model training and performance. This project exhibits 
+This project employs python to create an interactive web application in Streamlit. My app "Unsupervised Machine Learning: Principal Component Analysis (PCA) and K-Means" provides an intuitive interface which facilitates unsupervised machine learning model exploration. Using this application, a user may upload a dataset or utilize one of the two demo datasets to explore how adjusting different model imputs and hyperparameters affect training and performance. This project exhibits skills in visual communication and model development, demonstrating the translation of complex data into simplified outputs. 
 
 
 **See all files regarding this project in the [MLStreamlitApp Project Folder](./MLUnsupervisedApp).
