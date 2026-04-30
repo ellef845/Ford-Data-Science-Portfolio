@@ -20,7 +20,7 @@ To run the app locally:
 2. Make sure you have the packages numpy, pandas, matplotlib, seaborn, scikit-learn, and streamlit installed within your python environment.
 3. Enter "streamlit run unsupervised_app.py" into your terminal. 
 
-You may also run the app via this ["link"](). 
+You may also run the app via this ["link"](https://ellef845-ford-data-sci-mlunsupervisedappunsupervised-app-7gdwai.streamlit.app/). 
 
 ### References: 
 For project references, I used ["Data Wrangling with pandas Cheat Sheet"](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) made by http://pandas.pydata.org as well as course notes on ["PCA"](https://github.com/ellef845/Ford-Data-Science-Portfolio/blob/main/week_twelve/IDS_12_2_FINAL.ipynb) and ["K-Means"](https://github.com/ellef845/Ford-Data-Science-Portfolio/blob/main/week_thirteen/IDS%2013_1_FINAL.ipynb) created by David Smiley.
