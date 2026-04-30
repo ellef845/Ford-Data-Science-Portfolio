@@ -123,14 +123,22 @@ def naming_columns(df_clean, target_feature):
 # Compute PCA
 # ------------------------------------
 
-#Reduce the data to two components for visualization and further analysis
+# Reduce the data to two components for visualization and further analysis
 def reduce_data(X_std): 
+
+    # Check to make sure there is sufficient data (two samples and two features)
+    rows, cols = X_std.shape
+
+    if rows < 2 or cols < 2: 
+        return None, None
+
+    #Separate data into two components
     pca = PCA(n_components = 2)
     X_pca = pca.fit_transform(X_std)
    
     return (X_pca, pca)
 
-#State the explained and cumulative_variance
+# State the explained and cumulative_variance
 def pca_var(pca): 
     # Calculate variance
     explained_variance = pca.explained_variance_ratio_
@@ -176,7 +184,7 @@ def PCA_load_plot(pca, feature_names):
         columns = feature_names, 
         index = [f'PC{i+1}' for i in range(pca.n_components)]
     )
-    #Create positions for horizontal bars, ensuring that each feature gets it own row. 
+    # Create positions for horizontal bars, ensuring that each feature gets it own row. 
 
     features = loadings_df.columns.to_list()
     y_pos = np.arange(len(features))
@@ -260,7 +268,7 @@ def PCA_var_plot(X_std):
 # Compute K-Means
 # ------------------------------------
 
-#Define a function which computes K-Means
+# Define a function which computes K-Means
 
 def compute_kmeans(k_clusters, max_runs, X_std):
     kmeans = KMeans(n_clusters = k_clusters, max_iter = max_runs, random_state = 42)
@@ -318,12 +326,18 @@ def kmeans_elbow_sil_plot(ks, wcss, silhouette_scores):
 
     plt.tight_layout()
 
-    # Dsplay the figure
+    # Display the figure
     st.pyplot(fig)
 
 def kmeans_cluster(X_std, clusters, k_clusters):
     #Cluster Plot
     X_pca_viz, _ = reduce_data(X_std)
+
+    #Check to see if PCA was successful before making plots: 
+    if X_pca_viz is None:
+        st.error("PCA requires at least 2 features and 2 rows. Cannot make cluster plot.")
+        return # Exit the function early
+    
     fig, ax = plt.subplots(figsize=(10, 6))
 
     # Get unique cluster IDs (e.g., [0, 1, 2])
@@ -503,51 +517,55 @@ if st.button(f"Run Analysis {analysis_mode}"):
             #Reduce the dataset to user's selected number of components
             X_pca, pca_model = reduce_data(X_std)
 
-            #Create tabs: 
-            tab1, tab2, tab3, tab4 = st.tabs(["Variance Analyis", "2D Projection", "Feature Loadings", "Scree Plot"])
-
-            with tab1:
-                #Calucate the explained and cumulative variance
-                st.write("#### Variance Summary")
-                pca_var(pca_model)
+            #Warning if there isn't enough data
+            if X_pca is None: 
+                st.error("PCA requires at least 2 rows and 2 features. Input more data!")
+            else: 
+                #Create tabs: 
+                tab1, tab2, tab3, tab4 = st.tabs(["Variance Analyis", "2D Projection", "Feature Loadings", "Scree Plot"])
+    
+                with tab1:
+                    #Calucate the explained and cumulative variance
+                    st.write("#### Variance Summary")
+                    pca_var(pca_model)
+                    
+                    #Interpretation: 
+                    st.write("***Interpretation:*** The explained variance ratio shows how much of the total " \
+                    "dataset's variance is accounted for by each principal component. The cumulative explained " \
+                    "variance states how much variance you gain as you add additional components. " \
+                    "By multiplying both the explained variance ratio and the cumulative ratio by 100, " \
+                    "we can see what percent of each type of variance is explained by our model. ")
+    
+                with tab2: 
+                    st.subheader("2D Projection")
+                    # Make the scatter plot
+                    PCA_scatter(X_pca, naming_columns(df_processed, target_feature)[1], y)
+                    #Interpretation: 
+                    st.write("#### Interpretation")
+                    st.write("A scatter plot of PCA scores shows where observations lie on the new coordinate system created by our two components (or groups). By using datasets with a target variable, " \
+                    "we can see whether or not PCA correctly stratified the observations into distinct groups.")
                 
-                #Interpretation: 
-                st.write("***Interpretation:*** The explained variance ratio shows how much of the total " \
-                "dataset's variance is accounted for by each principal component. The cumulative explained " \
-                "variance states how much variance you gain as you add additional components. " \
-                "By multiplying both the explained variance ratio and the cumulative ratio by 100, " \
-                "we can see what percent of each type of variance is explained by our model. ")
-
-            with tab2: 
-                st.subheader("2D Projection")
-                # Make the scatter plot
-                PCA_scatter(X_pca, naming_columns(df_processed, target_feature)[1], y)
-                #Interpretation: 
-                st.write("#### Interpretation")
-                st.write("A scatter plot of PCA scores shows where observations lie on the new coordinate system created by our two components (or groups). By using datasets with a target variable, " \
-                "we can see whether or not PCA correctly stratified the observations into distinct groups.")
-            
-            with tab3:
-                # Make load plot
-                st.subheader("Feature Loadings")
-                PCA_load_plot(pca_model, X_std.columns.tolist())
-                #Interpretation: 
-                st.write("#### Interpretation")
-                st.write("A PCA loadings chart depicts the importance that each feature has to an individual component. " \
-                "Loadings can be either positive or negative. A variable with a positive loading is positively correlated with a component " \
-                "while a variable with a negative loading indicates that it is inversely correlated with a component.")
-                
-            with tab4:
-                #Make an explained variance plot
-                st.subheader("Variance Explained (Scree Plot)")
-                PCA_var_plot(X_std)
-
-                #Interpretation: 
-                st.write("#### Interpretation")
-                st.write("A scree plot shows how many components are needed for the ideal PCA analysis on your dataset. " \
-                "The model's cumulative explained variance is shown on the y-axis while the number of component options is shown on the x-axis. " \
-                "An elbow in the cumulative variance curve indicates that an additional component is no longer contributing to the overall explained variance of the model. " \
-                "Choosing the component at the elbow maximizes the model's overall effectiveness.")
+                with tab3:
+                    # Make load plot
+                    st.subheader("Feature Loadings")
+                    PCA_load_plot(pca_model, X_std.columns.tolist())
+                    #Interpretation: 
+                    st.write("#### Interpretation")
+                    st.write("A PCA loadings chart depicts the importance that each feature has to an individual component. " \
+                    "Loadings can be either positive or negative. A variable with a positive loading is positively correlated with a component " \
+                    "while a variable with a negative loading indicates that it is inversely correlated with a component.")
+                    
+                with tab4:
+                    #Make an explained variance plot
+                    st.subheader("Variance Explained (Scree Plot)")
+                    PCA_var_plot(X_std)
+    
+                    #Interpretation: 
+                    st.write("#### Interpretation")
+                    st.write("A scree plot shows how many components are needed for the ideal PCA analysis on your dataset. " \
+                    "The model's cumulative explained variance is shown on the y-axis while the number of component options is shown on the x-axis. " \
+                    "An elbow in the cumulative variance curve indicates that an additional component is no longer contributing to the overall explained variance of the model. " \
+                    "Choosing the component at the elbow maximizes the model's overall effectiveness.")
             
 # ------------------------------------
 # Run K-Means Model: 
