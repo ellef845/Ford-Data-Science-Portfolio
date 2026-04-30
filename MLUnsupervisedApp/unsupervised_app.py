@@ -588,9 +588,9 @@ if st.button(f"Run Analysis {analysis_mode}"):
             with tab1:
                 st.write("#### Accuracy Summary")
                 kmeans_accuracy(y, clusters)
-                st.write("""***Interpretation:*** Measuring the K-means model's accuracy, we can see how well the model did at '
-                'predicting our target variable. A higher accuracy score means that the model's generated clusters closely align with 
-                the true data labels, while a lower accuracy score, indicates the opposite. """)
+                st.write("""***Interpretation:*** Measuring the K-means model's accuracy, we can see how well the model did at
+                predicting our target variable. A higher accuracy score means that the model's generated clusters closely align with 
+                the true data labels, while a lower accuracy score indicates the opposite. """)
 
         
             with tab2:
@@ -614,5 +614,12 @@ if st.button(f"Run Analysis {analysis_mode}"):
                             values of k, number of clusters, on the x-axis. By searching for the "elbow" in the graph, where there is a bend 
                             or change in the rate of decrease,
                             we can find an optimal value of k.  
-                * **Silhouette Score:** The silhouette score indicates how similar an observation in its cluster compared to other clusters.
+                * **Silhouette Score:** The silhouette score indicates how similar an observation is to other points in its group and 
+                            its distance from other clusters.
+                            A silhouette score close to one
+                            indicates that clusters are tight and distinctly separated from other groups. A silhouette score close to negative one indicates 
+                            incorrect cluster assignment.
+                            The point with the highest silhouette score represents
+                            the optimal value of k for the model. 
+                            
                 """)
