@@ -7,7 +7,7 @@ PCA and K-Means models are utilized to learn more about unlabeled datasets. PCA 
 common characteristics shared by observations.
 
 Within the application, users may select different model features to use in calculations as well as adjust hyperparameters of the K-Means model (maximum iterations and number of desired clusters (k)).
-Selection of model feaures occurs under "Model Configuration" through dropdown boxes while hyperparamters are adjusted using sidebar sliders. 
+Selection of model features occurs under "Model Configuration" through dropdown boxes while hyperparamters are adjusted using sidebar sliders. 
 
 After a user personalizes and runs their model, they may receive scoring metrics and model feedback via visualizations. With the PCA model, users can observe their model's explained and cummulative variance, a 2D projection of their results, feature loadings, and a scree plot. Using the K-Means model, users can see model accuracy, 2D Cluster Visualization, and plots which suggest the optimal value of clusters (k). 
 
