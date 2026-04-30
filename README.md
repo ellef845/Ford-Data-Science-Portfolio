@@ -15,9 +15,18 @@ This project utilizes python to transform data from the 2008 Summer Olympics to 
 **See all files regarding this project in the [TidyData-Project folder](./TidyData-Project).
 
 #### Development of a Supervised Machine Learning Streamlit App:
-This app provides an interactive machine learning experience for the user, allowing them to experiment with decision tree and logistic regression models. Within the app, one may test how different hyperparameters affect specific scoring metrics as well as receive computer generated recommendations on how to create the optimal decision tree model. This projects builds upon my understanding of machine learning, showcasing clear comprehension of supervised machine learning model construction. It complements my overall portfolio, displaying a growing knowledge of Streamlit, Python development, and model development. 
+This project uses python to create an interactive web application in Streamlit. My app "Supervised Machine Learning: Decision Tree & Logistic Regression" provides an interactive machine learning experience which allows users to experiment with decision tree and logistic regression models. Within the app, one may test how different hyperparameters affect specific scoring metrics as well as receive computer generated recommendations on how to create the optimal decision tree model. This projects showcases comprehension of basic supervised machine learning model construction. It complements my overall portfolio, displaying a growing knowledge in producing data-driven applications. 
 
 
 **See all files regarding this project in the [MLStreamlitApp Project Folder](./MLStreamlitApp).
 
 **To run the deployed app, visit this ["link"](https://ellef845-ford-data-science-po-mlstreamlitappapp-mainfile-8u7d8n.streamlit.app/)
+
+#### Development of an Unupervised Machine Learning Streamlit App:
+This project employs python to create an interactive web application in Streamlit. My app "Unsupervised Machine Learning: Principal Component Analysis (PCA) and K-Means" provides an intuitive interface which provides unsupervised machine learning model exploration. Using this application, a user may upload a dataset or utilize one of the two demo datasets to explore how adjusting different model imputs and hyperparameters affects model training and performance. This project exhibits 
+
+
+**See all files regarding this project in the [MLStreamlitApp Project Folder](./MLUnsupervisedApp).
+
+**To run the deployed app, visit this ["link"]([https://ellef845-ford-data-science-po-mlstreamlitappapp-mainfile-8u7d8n.streamlit.app/](https://ellef845-ford-data-sci-mlunsupervisedappunsupervised-app-7gdwai.streamlit.app/))
+
