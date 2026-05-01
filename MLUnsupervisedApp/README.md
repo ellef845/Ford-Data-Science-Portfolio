@@ -25,6 +25,21 @@ You may also run the app via this ["link"](https://ellef845-ford-data-sci-mlunsu
 ### References: 
 For project references, I used ["Data Wrangling with pandas Cheat Sheet"](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) made by http://pandas.pydata.org as well as course notes on ["PCA"](https://github.com/ellef845/Ford-Data-Science-Portfolio/blob/main/Class_Notes/week_twelve/IDS_12_2_FINAL.ipynb) and ["K-Means"](https://github.com/ellef845/Ford-Data-Science-Portfolio/blob/main/Class_Notes/week_thirteen/IDS%2013_1_FINAL.ipynb) created by David Smiley.
 
+### Visualizations of the Application
+
+#### *Main Page*
+![App Main Page](images/mainpage_ml_unsupervisedapp.png) 
+
+<br>
+
+---
+
+<br>
+
+#### *Example of K-Means Model Performance Indicators*
+![K-Means Scoring Metrics](images/kmeans_metrics.png)
+
+
 
 
 
